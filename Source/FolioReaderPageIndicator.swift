@@ -94,16 +94,15 @@ class FolioReaderPageIndicator: UIView {
         } else {
             pagesLabel.text = " \(pagesRemaining) " + self.readerConfig.localizedReaderManyPagesLeft
         }
-        if let totalMinutes = totalMinutes, let totalPages = totalPages {
-            let minutesRemaining = Int(ceil(CGFloat((pagesRemaining * totalMinutes)/totalPages)))
-            if minutesRemaining > 1 {
-                minutesLabel.text = "\(minutesRemaining) " + self.readerConfig.localizedReaderManyMinutes+" ·"
-            } else if minutesRemaining == 1 {
-                minutesLabel.text = self.readerConfig.localizedReaderOneMinute+" ·"
-            } else {
-                minutesLabel.text = self.readerConfig.localizedReaderLessThanOneMinute+" ·"
-            }
-        }
+
+//        let minutesRemaining = Int(ceil(CGFloat((pagesRemaining * totalMinutes)/totalPages)))
+//        if minutesRemaining > 1 {
+//            minutesLabel.text = "\(minutesRemaining) " + self.readerConfig.localizedReaderManyMinutes+" ·"
+//        } else if minutesRemaining == 1 {
+//            minutesLabel.text = self.readerConfig.localizedReaderOneMinute+" ·"
+//        } else {
+//            minutesLabel.text = self.readerConfig.localizedReaderLessThanOneMinute+" ·"
+//        }
         
         
         reloadView(updateShadow: false)
